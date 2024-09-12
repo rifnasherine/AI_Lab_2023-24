@@ -45,7 +45,8 @@ print(minimax(0, 0, True, scores, treeDepth))
 ```
 
 ### Output:
-![MINIMAX SEARCH](https://github.com/user-attachments/assets/087ce2f4-1cd7-478a-97c2-cb915e2f8b2b)
+![minimax search (2)](https://github.com/user-attachments/assets/7d87d4a7-ac96-4fa3-8006-e459bdac251d)
+
 
 
 
