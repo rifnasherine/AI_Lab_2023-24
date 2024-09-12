@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/76fcb1e8-4ee6-4e70-982a-2204e8650078)# Ex.No: 3  Implementation of Minimax Search
+# Ex.No: 3  Implementation of Minimax Search
 ### DATE:                                                                            
 ### REGISTER NUMBER : 
 ### AIM: 
