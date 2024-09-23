@@ -14,10 +14,25 @@ To  write  a logic program  to solve Towers of Hanoi problem  using SWI-PROLOG.
 8. Run the program  to find answer of  query.
 
 ### Program:
+```
+% Base case: If there is only one disk, move it from Source to Destination.
+move(1, Source, Destination, _) :-
+    format('Move disk 1 from ~w to ~w.~n', [Source, Destination]).
+
+% Recursive case: Move N-1 disks from Source to Auxiliary, then move the Nth disk to Destination, and finally move N-1 disks from Auxiliary to Destination.
+move(N, Source, Destination, Auxiliary) :-
+    N > 1,
+    M is N - 1,
+    move(M, Source, Auxiliary, Destination), % Move N-1 disks from Source to Auxiliary
+    format('Move disk ~w from ~w to ~w.~n', [N, Source, Destination]), % Move the Nth disk from Source to Destination
+    move(M, Auxiliary, Destination, Source). % Move
+```
 
 
 
 ### Output:
+![towers of hanoi](https://github.com/user-attachments/assets/8cbf0b36-1978-4f0a-a35a-13e2a0e37aed)
+
 
 
 
