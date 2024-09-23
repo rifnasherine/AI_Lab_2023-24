@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/af4f7e5a-c35d-4e75-b3db-9f13e5a600b6)# Ex.No: 9  Logic Programming –  Computer Maintenance Expert System
+# Ex.No: 9  Logic Programming –  Computer Maintenance Expert System
 ### DATE:                                                                            
 ### REGISTER NUMBER : 
 ### AIM: 
