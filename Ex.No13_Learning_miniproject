@@ -1,14 +1,44 @@
-# Ex.No: 10 Learning – Use Supervised Learning  
-### DATE:                                                                            
-### REGISTER NUMBER : 
+# Ex.No13: House Price Prediction Using Linear Regression(Mini Project)  
+### DATE: 24-10-2024                                                                   
+### REGISTER NUMBER : 212222040133
 ### AIM: 
-To write a program to train the classifier for -----------------.
+To write a program to train the classifier for House Price Prediction Using Linear Regression.
 ###  Algorithm:
-
+The following steps were followed in the process:
+Data Generation: We generate a synthetic dataset with random values for house features (rooms, square footage, year built, and distance to amenities). 
+We also create a target variable (price) by defining a formula that combines these features, with added noise to make it more realistic.
+Data Preparation: We split the data into two parts:
+Training Set (80%): Used to train the model.
+Testing Set (20%): Used to evaluate the model’s performance.
+Linear Regression: A Linear Regression model is used to learn the relationship between the features and the target variable (price). 
+The model tries to fit the best possible line (hyperplane) to the data points.
+Model Evaluation: We evaluate the model using Mean Squared Error (MSE), which calculates the average of the squares of the errors between the actual and predicted values.
 ### Program:
+```
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+np.random.seed(42)
+num_samples = 100
+num_rooms = np.random.randint(1, 10, num_samples)  # Random rooms count between 1 and 10
+sq_ft = np.random.randint(500, 3500, num_samples)  # Random sq. ft. between 500 and 3500
+year_built = np.random.randint(1950, 2023, num_samples)  # Random year built between 1950 and 2023
+distance_to_amenities = np.random.uniform(0.5, 15.0, num_samples)  # Distance to amenities in km
+price = (num_rooms * 50000) + (sq_ft * 150) + ((2023 - year_built) * -1000) + (distance_to_amenities * -3000) + np.random.normal(0, 20000, num_samples)
+X = np.column_stack((num_rooms, sq_ft, year_built, distance_to_amenities))
+y = price
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = LinearRegression()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+print(f"Mean Squared Error: {mse}")
 
+```
 
 ### Output:
+https://drive.google.com/file/d/13lvtZFagvnBOdZoG9G4ZJUEy8Myz2B0u/view?usp=drivesdk
 
 
 ### Result:
